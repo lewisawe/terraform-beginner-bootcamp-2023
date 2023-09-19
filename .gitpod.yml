@@ -18,3 +18,4 @@ vscode:
   extensions:
     - amazonwebservices.aws-toolkit-vscode
     - hashicorp.terraform
+    - mhutchie.git-graph
