@@ -54,6 +54,20 @@ bundle exec ruby server.rb
 
 All of the code for our server is stored in the `server.rb` file.
 
+## Created a custom Provider using GO langauge 
+https://www.hashicorp.com/blog/writing-custom-terraform-providers
+
+From the article above, some possible reasons to create a custom provider are: 
+
+There are a few possible reasons for authoring a custom Terraform provider, such as:
+
+    - An internal private cloud whose functionality is either proprietary or would not benefit the open source community.
+
+    - A "work in progress" provider being tested locally before contributing back.
+
+    - Extensions of an existing provider
+
+
 ## CRUD
 
 Terraform Provider resources utilize CRUD.
