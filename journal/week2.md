@@ -75,3 +75,11 @@ Terraform Provider resources utilize CRUD.
 CRUD stands for Create, Read Update, and Delete
 
 https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
+
+## Setting Terraform variables via env vars
+
+use 
+```
+export TF_VAR_terratowns_access_token="example-token-1234-4567"
+export TF_VAR_teacherseat_user_uuid="example-uuid-1234-4567"
+```
