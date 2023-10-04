@@ -5,6 +5,12 @@ terraform {
       version = "1.0.0"
     }
   }
+    required_providers {
+    terratowns = {
+      source = "local.providers/local/terratowns"
+      version = "1.0.0"
+    }
+  }
 #   cloud {
 #     organization = "lewis-sawe"
 
