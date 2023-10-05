@@ -6,13 +6,13 @@ terraform {
     }
   }
 
-#   cloud {
-#     organization = "lewis-sawe"
+  cloud {
+    organization = "lewis-sawe"
 
-#     workspaces {
-#       name = "Terra-House-1"
-#     }
-#   }
+    workspaces {
+      name = "Terra-House-1"
+    }
+  }
 }
 
 provider "terratowns" {
@@ -21,16 +21,14 @@ provider "terratowns" {
   token = var.terratowns_access_token
 }
 
-module "terrahouse_aws" {
-  source = "./modules/terrahouse_aws"
+module "home_hamilton_hosting" {
+  source = "./modules/terrahome_aws"
   user_uuid = var.teacherseat_user_uuid
-  index_html_filepath = var.index_html_filepath
-  error_html_filepath = var.error_html_filepath
-  assets_path = var.assets_path
-  content_version = var.content_version
+  public_path = var.hamilton.public_path
+  content_version = var.hamilton.content_version
 }
 
-resource "terratowns_home" "home" {
+resource "terratowns_home" "home_hamilton" {
   name = "Lewis Hamilton the GOAT!!!"
   description = <<DESCRIPTION
 Lewis Hamilton, the epitome of Formula 1 greatness, 
@@ -39,7 +37,25 @@ rewriting history with his seven mesmerizing World Championships and
 igniting passion beyond the racetrack through his glamorous lifestyle, 
 iconic fashion, and unwavering dedication to social change
 DESCRIPTION
-  domain_name = module.terrahouse_aws.cloudfront_url
+  domain_name = module.home_hamilton_hosting.domain_name
   town = "missingo"
-  content_version = 1
+  content_version = var.hamilton.content_version
+}
+
+module "home_biryani_hosting" {
+  source = "./modules/terrahome_aws"
+  user_uuid = var.teacherseat_user_uuid
+  public_path = var.biryani.public_path
+  content_version = var.biryani.content_version
+}
+
+resource "terratowns_home" "home_biryani" {
+  name = "Biryani Recipe!!!"
+  description = <<DESCRIPTION
+Biryani is a flavorful and aromatic South Asian dish 
+known for its rich taste and unique blend of spices.
+DESCRIPTION
+  domain_name = module.home_biryani_hosting.domain_name
+  town = "missingo"
+  content_version = var.biryani.content_version
 }
