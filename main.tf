@@ -38,7 +38,7 @@ igniting passion beyond the racetrack through his glamorous lifestyle,
 iconic fashion, and unwavering dedication to social change
 DESCRIPTION
   domain_name = module.home_hamilton_hosting.domain_name
-  town = "missingo"
+  town = "gamers-grotto"
   content_version = var.hamilton.content_version
 }
 
@@ -56,6 +56,6 @@ Biryani is a flavorful and aromatic South Asian dish
 known for its rich taste and unique blend of spices.
 DESCRIPTION
   domain_name = module.home_biryani_hosting.domain_name
-  town = "missingo"
+  town = "cooker-cove"
   content_version = var.biryani.content_version
 }

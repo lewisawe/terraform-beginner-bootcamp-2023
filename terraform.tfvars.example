@@ -1,9 +1,9 @@
 terratowns_endpoint="https://terratowns.cloud/api"
 biryani = {
   public_path = "/workspace/terraform-beginner-bootcamp-2023/public/biryani"
-  content_version = 2 
+  content_version = 5 
 }
 hamilton = {
   public_path = "/workspace/terraform-beginner-bootcamp-2023/public/hamilton"
-  content_version = 1 
+  content_version = 4 
 }
